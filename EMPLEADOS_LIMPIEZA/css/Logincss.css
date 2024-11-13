@@ -1,0 +1,195 @@
+﻿/* Definición de variables de color globales */
+:root {
+    --background: #1a1a2e;
+    --color: #ffffff;
+    --primary-color: #0f3460;
+}
+
+/* Configuración del modelo de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Comportamiento de desplazamiento suave para la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--color);
+    letter-spacing: 1px;
+    transition: background 0.2s ease;
+}
+
+/* Estilo de los enlaces */
+a {
+    text-decoration: none;
+    color: var(--color);
+}
+
+/* Tamaño de la fuente para los encabezados de nivel 1 */
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Contenedor general para centrar el contenido */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor para el área de inicio de sesión */
+.login-container {
+    position: relative;
+    width: 22.2rem;
+}
+
+/* Contenedor para el formulario de inicio de sesión */
+.form-container {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 99;
+    padding: 2rem;
+}
+
+/* Estilo para los campos de entrada en el formulario de inicio de sesión */
+.login-container form input {
+    display: block;
+    padding: 14.5px;
+    width: 100%;
+    margin: 2rem 0;
+    color: var(--color);
+    outline: none;
+    background-color: rgba(145, 145, 145, 0.12);
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    font-size: 15px;
+    backdrop-filter: blur(15px);
+}
+
+    /* Estilo para el campo de entrada al recibir foco */
+    .login-container form input:focus {
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+        animation: wobble 0.3s ease-in;
+    }
+
+/* Estilo para los botones en el formulario de inicio de sesión */
+.login-container form button {
+    background-color: var(--primary-color);
+    color: var(--color);
+    padding: 13px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all 0.1s ease-in-out;
+    border: none;
+}
+
+    /* Estilo del botón al pasar el cursor sobre él */
+    .login-container form button:hover {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+        transform: scale(1.02);
+    }
+
+/* Estilo para los círculos decorativos */
+.circle {
+    width: 8rem;
+    height: 8rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Estilo para la ilustración */
+.illustration {
+    position: absolute;
+    top: -14%;
+    right: -2px;
+    width: 90%;
+}
+
+/* Estilo para el primer círculo decorativo */
+.circle-one {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(-45%, -45%);
+}
+
+/* Estilo para el segundo círculo decorativo */
+.circle-two {
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: translate(45%, 45%);
+}
+
+/* Contenedor para el botón de tema */
+.theme-btn-container {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+}
+
+/* Estilo para el botón de tema */
+.theme-btn {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+    .theme-btn:hover {
+        width: 40px !important;
+    }
+
+/* Animación de "wobble" para los campos de entrada */
+@keyframes wobble {
+    0%, 100% {
+        transform: scale(1.025);
+    }
+
+    25%, 75% {
+        transform: scale(1);
+    }
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+    .menu button {
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: var(--primary-color);
+        color: var(--color);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+        .menu button:hover {
+            background-color: rgba(15, 52, 96, 0.8);
+        }
